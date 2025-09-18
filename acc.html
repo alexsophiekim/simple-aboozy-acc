@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Transfer</title>
+  <style>
+    *{ margin: 0; padding: 0; box-sizing: border-box;}
+    body { font-family: sans-serif; text-align: center; padding: 50px; gap:1em; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #f0f0f0; }
+    button { padding: 12px 24px; font-size: 16px; border-radius: 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Brodiam LTD - (Aboozy Chicken)</h2>
+  <p>Account: <strong id="account">06-0730-0465387-00</strong></p>
+  <button onclick="copyAccount()">Copy: 06-0730-0465387-00</button>
+
+  <script>
+    function copyAccount() {
+      const acc = document.getElementById("account").innerText;
+      navigator.clipboard.writeText(acc).then(() => {
+        alert("06-0730-0465387-00 \nAccount number copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
